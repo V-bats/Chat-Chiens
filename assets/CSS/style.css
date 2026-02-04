@@ -1,0 +1,67 @@
+body{
+    transition: background 0.2s, color 0.2s;
+}
+body.light{
+    background: white;
+    color: black;
+}
+body.dark{
+    background: black;
+    color: white;
+}
+
+h1{
+    text-align: center;
+}
+
+.change{
+    padding: 10px;
+    cursor: pointer;
+    background-color: grey;
+    border-radius: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+
+}
+
+.btn{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.75rem;
+}
+
+.para {
+    text-align: center;
+    margin-top: 15rem;
+}
+
+#img {
+    object-fit: cover;
+    width: 600px; height: 500px;
+    border-radius: 10%;
+    margin-bottom: 4rem;
+}
+
+#aleatoires{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#btn{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+@media screen and (max-width: 767px){
+    body {
+        width: 100%
+    }
+}
