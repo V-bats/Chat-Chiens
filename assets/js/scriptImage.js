@@ -1,32 +1,10 @@
-const btnTheme = document.getElementById("btnTheme");
-const body = document.body;
+// Selection des elements HTML
+const image = document.getElementById("img");
+const btnChat = document.getElementById("cat");
+const btnChien = document.getElementById("dog");
+const btnfavoris= document.getElementById('favoris')
 
-const savedTheme = localStorage.getItem("theme");
-changeTheme(savedTheme);
-
-btnTheme.addEventListener("click", () => {
-    if(body.classList.contains("dark")) {
-        changeTheme("light");
-    }
-    else {
-        changeTheme("dark")
-    }
-});
-
-function changeTheme(theme) {
-    body.classList.remove("light", "dark");
-    body.classList.add(theme);
-
-    if(btnTheme.textContent === "mode clair 🌞") {
-        btnTheme.textContent = "mode sombre 🌜";
-        btnTheme.style.background = "grey";
-    }else {
-        btnTheme.textContent = "mode clair 🌞";
-        btnTheme.style.background = "white";
-    }
-    localStorage.setItem("theme", theme);
-}
-
+// Fonction qui charge une image aleatoire
 async function chargerImage(type) {
     let url;
  
@@ -50,3 +28,48 @@ async function chargerImage(type) {
         return data.message;
     }
 }
+ 
+// Fonction async
+async function afficherImage(type) {
+    btnChat.disabled = true;
+    btnChien.disabled = true;
+ 
+    image.src = "./assets/images/patientez.webp";
+ 
+    try {
+        const nouvelleImage = await chargerImage(type);
+        image.src = nouvelleImage;
+    } catch (erreur) {
+        image.src = "./assets/img/error.webp";
+    }
+ 
+    btnChat.disabled = false;
+    btnChien.disabled = false;
+}
+ 
+function recupFavoris() {
+    const data = localStorage.getItem("favoris");
+    if (!data) return [];
+    return JSON.parse(data);
+}
+
+function sauvegardeFavoris(favs) {
+    localStorage.setItem("favoris", JSON.stringify(favs));
+    console.log(favs);
+}
+
+btnfavoris.addEventListener('click', function () {
+    const newFav = image.src;
+    const favs = recupFavoris();
+
+    if (favs.includes(newFav)) {
+        alert("déjà dans les favoris !");
+        return;
+    }
+
+    favs.push(newFav);
+    sauvegardeFavoris(favs);
+
+    alert('Ajouté aux favoris !');
+});
+

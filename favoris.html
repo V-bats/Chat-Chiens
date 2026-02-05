@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chien et Chats</title>
+    <title>Favoris</title>
     <link rel="stylesheet" href="./assets/CSS/style.css">
-    <script src="./assets/js/scriptImage.js" defer></script>
+    <script src="./assets/js/favoris.js" defer></script>
     <script src="./assets/js/theme.js" defer></script>
 </head>
+
 <body>
 <header>
 <section class="btn">
-     <a href="image.html">
+    <a href="image.html">
         <strong class="retour" id="acceuil">🐾 Acceuil</strong>
     </a>
     <a href="./image.html">
@@ -21,30 +22,13 @@
        <strong class="retour" id="acceuil"> 🌟 Favoris</strong>
     </a>
     <button class="change" id="btnTheme">Mode sombre</button>
+</section>
 </header>
 
 <main>
-</section>
-    <h1>Images de Chiens et Chats</h1>
-<section id="aleatoires">
-
-    <img id="img" src="./assets/images/ZEN.webp" alt="image">
-
-<div id="btn">
-    <button id="cat">Chats</button>
-    <button id="dog">Chiens</button>
-</div>
-</section>
-
-<section id="favs">
-<div id="btnFavoris">
-    <button id="favoris">Ajouter aux favoris</button>
-</div>
-    <a href="favoris.html">
-        <strong class="ajout" id="ajoutFavoris">liste des favoris</strong>
-    </a>
-</section>
-
+<h1>Mes images favorites</h1>
+<p id="emptyMgs">Aucun favori pour le moment.</p>
+<div id="favorisList" class="favoris-list"></div>
 </main>
 </body>
 </html>

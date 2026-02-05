@@ -44,7 +44,7 @@ a{
     object-fit: cover;
     width: 600px; height: 500px;
     border-radius: 10%;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 #aleatoires{
@@ -56,9 +56,18 @@ a{
 
 #btn{
     display: flex;
-    justify-content: space-around;
-    width: 50%;
+    justify-content:space-around;
+    width: 20%;
 }
+
+#favs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
 
 @media screen and (max-width: 767px){
     body {
