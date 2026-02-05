@@ -45,8 +45,13 @@ async function afficherImage(type) {
  
     btnChat.disabled = false;
     btnChien.disabled = false;
+
 }
+
+btnChat.addEventListener("click", () => afficherImage("chat"));
+btnChien.addEventListener("click", () => afficherImage("chien"));
  
+
 function recupFavoris() {
     const data = localStorage.getItem("favoris");
     if (!data) return [];

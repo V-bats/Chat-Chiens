@@ -1,5 +1,5 @@
 body{
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.4s;
 }
 body.light{
     background: white;
@@ -23,7 +23,7 @@ h1{
 
 a{
     text-decoration: none;
-    color: red;
+    color: rgb(0, 195, 255);
 
 }
 
@@ -38,6 +38,11 @@ a{
 .para {
     text-align: center;
     margin-top: 15rem;
+}
+
+#imgFavoris {
+    width: 600px; height: 500px;
+    margin: 3rem;
 }
 
 #img {
@@ -68,6 +73,22 @@ a{
     margin-top: 2rem;
 }
 
+.retirer{
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(17, 15, 15);
+    border-radius: 15px;
+    color: red
+}
+.annuler{
+    display: flex;
+    justify-content: center;
+}
+
+.imgFav{
+    display: flex;
+    justify-content: center;
+}
 
 @media screen and (max-width: 767px){
     body {

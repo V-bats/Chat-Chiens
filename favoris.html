@@ -12,11 +12,11 @@
 <body>
 <header>
 <section class="btn">
-    <a href="image.html">
+    <a href="index.html">
         <strong class="retour" id="acceuil">🐾 Acceuil</strong>
     </a>
     <a href="./image.html">
-        <strong class="retour" id="acceuil"> 🐱🐶 Chien et Chats</strong>
+        <strong class="retour" id="acceuil"> 🐱🐶 Choix d'images</strong>
     </a>
     <a href="./favoris.html">
        <strong class="retour" id="acceuil"> 🌟 Favoris</strong>
@@ -27,8 +27,21 @@
 
 <main>
 <h1>Mes images favorites</h1>
+
 <p id="emptyMgs">Aucun favori pour le moment.</p>
-<div id="favorisList" class="favoris-list"></div>
+
+<section class="imgFav">
+    <button class="changeLeft" id="left">&lt;</button>
+    <img src="" id="imgFavoris"></img>
+   <button class="changeRight" id="right">&gt;</button>
+</section>
+
+<section class="annuler" id="annulerFav">
+    <button class="retirer" id="retirerFav">
+       <strong> ❌ Retirer des favoris </strong> 
+    </button>
+</section>
+
 </main>
 </body>
 </html>
